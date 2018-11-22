@@ -35,15 +35,13 @@ After reading the data,we preprocessed the data like removing stopwords ,convert
 **Splitting the data :** As the data is not temporal in nature which means not changing with time we can split the data randomly for training ,cross validation and testing.
 Then after splitting the data it is also found out that training and test data having almost same distributions and from distributions it is clear that data is imbalanced.
 
-![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png) ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png) ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ycv.png)
-
 <p align="center">
-  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.pnge" width="350" title="hover text">
+  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png" width="350" title="Train Distibution">
 </p>
 <p align="center">
-  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.pnge" width="350" title="hover text">
+  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ycv.png" width="350" title="CV Distibutiot">
 </p>
 <p align="center">
-  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.pnge" width="350" title="hover text">
+  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/yte.png" width="350" title="Test Distibutio">
 </p>
 
