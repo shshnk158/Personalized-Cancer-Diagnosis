@@ -60,11 +60,47 @@ Creating a random model, because As we know that log-loss is ranging from 0 to i
 Checking each feature whether its usefull for prediction of class, or else removing that feature from our dataset. We do this by predicting the class only with this feature, and comparethe results with random model.
 
 1. Gene Feature
-Gene is categorical feature from that we observed that there   ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/gene.png)
-are 235 types of unique genes out of which top 50 genes
-nearly contribute 75 percent of data.
-Now we featured the gene into vector by one hot encoding,
-apply simple logistic regression model and compared results
-with random model, which inturn found gene feature is important one.
+Gene is categorical feature from that we observed that there are 229 types of unique genes out of which top 50 genes nearly contribute 75 percent of data.
+<p align="center">
+  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/gene.png" width="350" title="Test Distibutio">
+</p>
+Now we featured the gene into vector by one hot encoding, apply simple logistic regression model and compared results with random model, which inturn found gene feature is important one.
 
+2. Variation Feature
+Here variation is also a categorical feature and we observed that 1927 unique variations out of 2124 present in training data which means most of variations occurred once or twice. CDF of variations looks as follows:
+<p align="center">
+  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/var.png" width="350" title="Test Distibutio">
+</p>
+Applied Logistic regression model and results are less than random model. so we use variation feature.
+
+3. Text Feature.
+Ofcourse, we need to use text feature because we need to compare every gene, variation with clinical text data. even though we put this across random model and results are good. we used one hot encoding BoW model to convert words to vectors.
+
+## ML Models
+
+### 1. Naive Bayes
+We know that for text data NB model is a baseline model.Now we applied the training data to the model and used the CV data for finding best hyper-parameter (alpha). With the best alpha we fitted the model and test data is applied to the model and found out the log-loss value is 1.35.We also checked the probabilities of each class for each data, and also shown what features impacted our result.
+In the end, theres a table comparing all the models I have put to test.
+
+### 2. KNN
+As we know that k-NN model is not interpretable, means it doesnt give probabilistic outputs,even though we tried out to check log loss. we used response coding instead of one hot encoding because of curse of dimensionality problem.Found best k using hyperparameter search and with best k got log loss 1.10.
+
+### 3. Logistic regression
+We also know that LR works well with high dimension data and it is also interpretable. So we did for both class-balanced(oversampling of lower class points) and unbalanced and applied the training data to the model and used the CV data for finding best hyper-parameter (lambda).
+And the described results are shown at end with a neat table format.
+
+### 4. Linear SVM
+We used Linear SVM(with class balancing) because it is interpretable and works very well with high dimension data. RBF Kernel SVM is not interpretable so we not used it . Now we applied the training data to the model and used the CV data for finding best hyper-parameter (C)
+With the best C we fitted the model and test data is applied to the model and found out the log-loss value is 1.22
+
+### 5. Random forest
+- **One hot encoding:** Normally DT works well with low-dimension data.It is also interpretable. By changing the no of base learners and max depth in Random Forest Classifier we found that best base learners=1000 and max depth=10.Then we fitted the model with best hyper-parameters and test data is applied to it and found out that log loss value is 1.17
+
+- **Response coding** By changing the no of base learners and max depth in Random Forest Classifier we found that best base learners=100 and max depth=5.Then we fitted the model with best hyper-parameters and found that train logloss is 0.06,and CV log loss is 1.41 which says that model is overfitted even with best hyper-parameters.So we don’t use RF+Response Coding .
+
+### 6. Stacking Classifier
+We stacked three classifiers named LR,SVM,NB and LR as meta classifier.Now we applied the training data to the model and used the CV data for finding best hyper-parameter.With the best hyperparameter we fitted the model and test data is applied to the model and found out the log-loss value is 1.15
+
+
+**At the end, I tried all these models with TfidfVectorizer and also listed log loss below,**
 
