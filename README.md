@@ -30,7 +30,15 @@ Multi class Log-Loss,confusion matrix(Log-Loss is chosen because it actually use
 Data was provided by Data from Memorial Sloan Kettering Cancer Center (MSKCC) and it can be found on kaggle https://www.kaggle.com/c/msk-redefining-cancer-treatment/data.
 We have two data files, one conatins the information about the genetic mutations and the other contains the clinical evidence (text) that human experts/pathologists use to classify the genetic mutations.Both these data files are have a common column called ID which is used to join these two files.
 
-After reading the data,we preprocessed the data like removing stopwords ,converting to lower case and removing punctuations etc
+After reading the data,we preprocessed the data like removing stopwords ,converting to lower case and removing punctuations etc. This is what dataset looks like
+```
+	ID	Gene	Variation	Class	TEXT
+	0	FAM58A	Truncating Mutations	1	cyclin dependent kinases cdks regulate variety...
+	1	CBL	W802*	2	abstract background non small cell lung cancer...
+	2	CBL	Q249E	2	abstract background non small cell lung cancer...
+	3	CBL	N454D	3	recent evidence demonstrated acquired uniparen...
+	4	CBL	L399V	4	oncogenic mutations monomeric casitas b lineag...
+```
 
 **Splitting the data :** As the data is not temporal in nature which means not changing with time we can split the data randomly for training ,cross validation and testing.
 Then after splitting the data it is also found out that training and test data having almost same distributions and from distributions it is clear that data is imbalanced.
@@ -44,4 +52,12 @@ Then after splitting the data it is also found out that training and test data h
 <p align="center">
   <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/yte.png" width="350" title="Test Distibutio">
 </p>
+
+## Random Model:
+Creating a random model, because As we know that log-loss is ranging from 0 to infinite.So we first defined one random model so that if our ML model has log-loss less than our random model then we can consider our ML model is good.
+
+## Univariate Analysis
+Checking each feature whether its usefull for prediction of class, or else removing that feature from our dataset. We do this by predicting the class only with this feature, and comparethe results with random model.
+
+1. Gene Feature
 
