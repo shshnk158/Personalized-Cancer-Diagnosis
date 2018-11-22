@@ -26,14 +26,15 @@ Multi class Log-Loss,confusion matrix(Log-Loss is chosen because it actually use
 
 **Machine Learning objective:** Predict the probability of each data point belonging to each of nine classes.
 
-## Datset
+## Dataset
 Data was provided by Data from Memorial Sloan Kettering Cancer Center (MSKCC) and it can be found on kaggle https://www.kaggle.com/c/msk-redefining-cancer-treatment/data.
 We have two data files, one conatins the information about the genetic mutations and the other contains the clinical evidence (text) that human experts/pathologists use to classify the genetic mutations.Both these data files are have a common column called ID which is used to join these two files.
 
 After reading the data,we preprocessed the data like removing stopwords ,converting to lower case and removing punctuations etc
+
 **Splitting the data :** As the data is not temporal in nature which means not changing with time we can split the data randomly for training ,cross validation and testing.
 Then after splitting the data it is also found out that training and test data having almost same distributions and from distributions it is clear that data is imbalanced.
 
-![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png)
+![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png) ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png) ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ycv.png)
 
 
