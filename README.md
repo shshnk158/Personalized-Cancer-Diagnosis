@@ -37,4 +37,13 @@ Then after splitting the data it is also found out that training and test data h
 
 ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png) ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png) ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ycv.png)
 
+<p align="center">
+  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.pnge" width="350" title="hover text">
+</p>
+<p align="center">
+  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.pnge" width="350" title="hover text">
+</p>
+<p align="center">
+  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.pnge" width="350" title="hover text">
+</p>
 
