@@ -32,12 +32,12 @@ We have two data files, one conatins the information about the genetic mutations
 
 After reading the data,we preprocessed the data like removing stopwords ,converting to lower case and removing punctuations etc. This is what dataset looks like
 ```
-	ID	Gene	Variation	Class	TEXT
+	ID	Gene	Variation		Class		TEXT
 	0	FAM58A	Truncating Mutations	1	cyclin dependent kinases cdks regulate variety...
-	1	CBL	W802*	2	abstract background non small cell lung cancer...
-	2	CBL	Q249E	2	abstract background non small cell lung cancer...
-	3	CBL	N454D	3	recent evidence demonstrated acquired uniparen...
-	4	CBL	L399V	4	oncogenic mutations monomeric casitas b lineag...
+	1	CBL	W802*			2	abstract background non small cell lung cancer...
+	2	CBL	Q249E			2	abstract background non small cell lung cancer...
+	3	CBL	N454D			3	recent evidence demonstrated acquired uniparen...
+	4	CBL	L399V			4	oncogenic mutations monomeric casitas b lineag...
 ```
 
 **Splitting the data :** As the data is not temporal in nature which means not changing with time we can split the data randomly for training ,cross validation and testing.
@@ -60,4 +60,11 @@ Creating a random model, because As we know that log-loss is ranging from 0 to i
 Checking each feature whether its usefull for prediction of class, or else removing that feature from our dataset. We do this by predicting the class only with this feature, and comparethe results with random model.
 
 1. Gene Feature
+Gene is categorical feature from that we observed that there   ![alt text](https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/gene.png)
+are 235 types of unique genes out of which top 50 genes
+nearly contribute 75 percent of data.
+Now we featured the gene into vector by one hot encoding,
+apply simple logistic regression model and compared results
+with random model, which inturn found gene feature is important one.
+
 
