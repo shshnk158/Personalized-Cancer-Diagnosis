@@ -44,13 +44,13 @@ After reading the data,we preprocessed the data like removing stopwords ,convert
 Then after splitting the data it is also found out that training and test data having almost same distributions and from distributions it is clear that data is imbalanced.
 
 <p align="center">
-  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ytr.png" width="350" title="Train Distibution">
+  <img src="Images/ytr.png" width="350" title="Train Distibution">
 </p>
 <p align="center">
-  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/ycv.png" width="350" title="CV Distibutiot">
+  <img src="Images/ycv.png" width="350" title="CV Distibutiot">
 </p>
 <p align="center">
-  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/yte.png" width="350" title="Test Distibutio">
+  <img src="Images/yte.png" width="350" title="Test Distibutio">
 </p>
 
 ## Random Model:
@@ -62,14 +62,14 @@ Checking each feature whether its usefull for prediction of class, or else remov
 1. Gene Feature
 Gene is categorical feature from that we observed that there are 229 types of unique genes out of which top 50 genes nearly contribute 75 percent of data.
 <p align="center">
-  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/gene.png" width="350" title="Test Distibutio">
+  <img src="Images/gene.png" width="350" title="Test Distibutio">
 </p>
 Now we featured the gene into vector by one hot encoding, apply simple logistic regression model and compared results with random model, which inturn found gene feature is important one.
 
 2. Variation Feature
 Here variation is also a categorical feature and we observed that 1927 unique variations out of 2124 present in training data which means most of variations occurred once or twice. CDF of variations looks as follows:
 <p align="center">
-  <img src="https://github.com/shshnk158/Personalized-Cancer-Diagnosis/blob/master/Images/var.png" width="350" title="Test Distibutio">
+  <img src="Images/var.png" width="350" title="Test Distibutio">
 </p>
 Applied Logistic regression model and results are less than random model. so we use variation feature.
 
@@ -101,6 +101,16 @@ With the best C we fitted the model and test data is applied to the model and fo
 ### 6. Stacking Classifier
 We stacked three classifiers named LR,SVM,NB and LR as meta classifier.Now we applied the training data to the model and used the CV data for finding best hyper-parameter.With the best hyperparameter we fitted the model and test data is applied to the model and found out the log-loss value is 1.15
 
+## Results based on BoW
+
+<p align="center">
+  <img src="Images/Cancer_BOW.jpg" width="350" title="Test Distibutio">
+</p>
 
 **At the end, I tried all these models with TfidfVectorizer and also listed log loss below,**
 
+## Results based on TF-IDF
+
+<p align="center">
+  <img src="Images/Cancer_TFIDF.jpg" width="350" title="Test Distibutio">
+</p>
