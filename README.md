@@ -104,7 +104,7 @@ We stacked three classifiers named LR,SVM,NB and LR as meta classifier.Now we ap
 ## Results based on BoW
 
 <p align="center">
-  <img src="Images/Cancer_BOW.jpg" width="350" title="Test Distibutio">
+  <img src="Images/Cancer_BOW.jpg" width="600" title="Test Distibutio">
 </p>
 
 **At the end, I tried all these models with TfidfVectorizer and also listed log loss below,**
@@ -112,5 +112,5 @@ We stacked three classifiers named LR,SVM,NB and LR as meta classifier.Now we ap
 ## Results based on TF-IDF
 
 <p align="center">
-  <img src="Images/Cancer_TFIDF.jpg" width="350" title="Test Distibutio">
+  <img src="Images/Cancer_TFIDF.jpg" width="600" title="Test Distibutio">
 </p>
